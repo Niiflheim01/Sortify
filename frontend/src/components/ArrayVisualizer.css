@@ -1,0 +1,31 @@
+.array-visualizer {
+  display: flex;
+  align-items: flex-end;
+  height: 300px;
+  margin: 20px 0;
+  gap: 4px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.array-bar {
+  width: 24px;
+  min-width: 16px;
+  margin: 0 2px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: background 0.2s, height 0.3s;
+  position: relative;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  color: #333;
+  user-select: none;
+} 
