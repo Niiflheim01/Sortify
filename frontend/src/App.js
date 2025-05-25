@@ -4,7 +4,7 @@ import ArrayVisualizer from './components/ArrayVisualizer';
 import Stats from './components/Stats';
 import './App.css';
 
-const API_URL = 'http://127.0.0.1:8000/sort';
+const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/sort';
 
 function App() {
   const [array, setArray] = useState([30, 10, 50, 20, 60, 40]);

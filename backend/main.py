@@ -1,10 +1,20 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Literal, Optional
 from sorting.algorithms import bubble_sort, merge_sort, quick_sort
 from sorting.data_structures import Array, LinkedList
 
 app = FastAPI(title="Sortify Sorting Simulator API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 class SortRequest(BaseModel):
     array: List[int]
